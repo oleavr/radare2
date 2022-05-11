@@ -367,7 +367,7 @@ typedef struct r_bin_xtr_metadata_t {
 } RBinXtrMetadata;
 
 typedef int (*FREE_XTR)(void *xtr_obj);
-typedef struct r_bin_xtr_extract_t {
+typedef struct r_bin_xtr_data_t {
 	char *file;
 	RBuffer *buf;
 	ut64 size;
@@ -846,6 +846,7 @@ extern RBinPlugin r_bin_plugin_nin3ds;
 extern RBinPlugin r_bin_plugin_xbe;
 extern RBinPlugin r_bin_plugin_bflt;
 extern RBinXtrPlugin r_bin_xtr_plugin_xtr_fatmach0;
+extern RBinXtrPlugin r_bin_xtr_plugin_xtr_xalz;
 extern RBinXtrPlugin r_bin_xtr_plugin_xtr_dyldcache;
 extern RBinXtrPlugin r_bin_xtr_plugin_xtr_pemixed;
 extern RBinXtrPlugin r_bin_xtr_plugin_xtr_sep64;
