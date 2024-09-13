@@ -549,7 +549,7 @@ static inline void *r_new_copy(int size, void *data) {
 #define R_SYS_ARCH "x86"
 #define R_SYS_BITS R_SYS_BITS_32
 #define R_SYS_ENDIAN 0
-#elif __EMSCRIPTEN__ || __wasi__
+#elif __wasi__
 #define R_SYS_ARCH "wasm"
 #define R_SYS_BITS (R_SYS_BITS_32 | R_SYS_BITS_64)
 #define R_SYS_ENDIAN 0
@@ -598,9 +598,9 @@ static inline void *r_new_copy(int size, void *data) {
 #define R_SYS_BITS (R_SYS_BITS_32 | R_SYS_BITS_64)
 #define R_SYS_ENDIAN 1
 #elif __EMSCRIPTEN__
-/* we should default to wasm when ready */
 #define R_SYS_ARCH "x86"
-#define R_SYS_BITS R_SYS_BITS_32
+#define R_SYS_BITS R_SYS_BITS_64
+#define R_SYS_ENDIAN 0
 #elif __riscv__ || __riscv
 # define R_SYS_ARCH "riscv"
 # define R_SYS_ENDIAN 0
